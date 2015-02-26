@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic Page Needs
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title>Charades game</title>
+	<meta name="description" content="">
+	<meta name="author" content="Fathi Abdoon">
+
+	<!-- Mobile Specific Metas
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- FONT
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+	<!-- CSS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+	<style>
+	/*custom styling*/
+
+	.step1buttons{
+		text-align:center;
+		/*border: 1px solid #ccc;*/
+	} 
+
+	#newgroupwrap{
+		display: none
+	}
+
+	</style>
+
+
+	<!-- Favicon
+	–––––––––––––––––––––––––––––––––––––––––––––––––– 
+	<link rel="icon" type="image/png" href="../../dist/images/favicon.png">-->
+
+</head>
+	<body>
+
+		<div class="container">
+			<section class="header">
+				<h1>Charades</h1>
+			</section>
+		</div>
+
+		<!-- first step is to show the option to the user -->
+		<div class="container" id="showoptionswrap">
+				<div class="one-third column">&nbsp;</div>
+				<div class="one-third column step1buttons">
+					<p>
+						<a class="button" href="#" style="">Create a new group</a>
+					</p>
+					<p>
+						<a class="button" href="#" style="">Join a group</a>
+					</p>
+				</div>
+				<div class="one-third column">&nbsp;</div>
+		</div><!-- #showoptionswrapper -->
+
+		<!-- this will be a form for creating new group -->
+		<div class="container" id="newgroupwrap">
+			<form>
+				<div class="row">
+					<label for="username">Username</label>
+					<input class="u-full-width" type="text" placeholder="Username" id="username">
+					<label for="numberofpeople">How many people playing?</label>
+					<select class="u-full-width" id="numberofpeople">
+						<option></option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+						<option>11</option>
+						<option>12</option>
+						<option>13</option>
+					</select>
+					<label for="numberofpeople">Number of teams</label>
+					<select class="u-full-width" id="numberofpeople">
+						<option></option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+						<option>11</option>
+						<option>12</option>
+						<option>13</option>
+					</select>
+					<label for="code">Code</label>
+					<input class="u-full-width" type="text" placeholder="Code" id="code">
+					<input class="button-primary" type="submit" value="Submit">
+				</div><!-- .row -->
+			</form>
+		</div><!-- #newgroupwrap -->
+
+		<div class="container" id="joingroupwrap">
+			<form>
+				<div class="row">
+					<label for="username">Username</label>
+					<input class="u-full-width" type="text" placeholder="Username" id="username">
+					<label for="code">Code</label>
+					<input class="u-full-width" type="text" placeholder="Code" id="code">
+					<input class="button-primary" type="submit" value="Submit">
+				</div>
+			</form>
+		</div><!-- joingroupwrap -->
+		
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+
+	<!-- End Document
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	</body>
+</html>
